@@ -1,0 +1,846 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="需求分析,翻译," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Loew 译
+写一个好的产品需求文档（Product Requirements Document, PRD）不是一件简单的事情，但是很有必要。产品需求文档可以更好的帮助你交流新的功能与你的同事；还可以帮助你得出怎么样使用每个新的功能去解决问题和实现你的目标的答案。
+这里列了一些产品需求文档必须具备的部分。每个部分都很重要。还有他们全来自于一个结合的整体，结果可以改变你的产品管理流程：
+
+1.客观的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是一个好的产品需求文档模版？">
+<meta property="og:url" content="http://www.loewwu.com/2017/04/02/What's a PRD Template/index.html">
+<meta property="og:site_name" content="Loew Wu">
+<meta property="og:description" content="Loew 译
+写一个好的产品需求文档（Product Requirements Document, PRD）不是一件简单的事情，但是很有必要。产品需求文档可以更好的帮助你交流新的功能与你的同事；还可以帮助你得出怎么样使用每个新的功能去解决问题和实现你的目标的答案。
+这里列了一些产品需求文档必须具备的部分。每个部分都很重要。还有他们全来自于一个结合的整体，结果可以改变你的产品管理流程：
+
+1.客观的">
+<meta property="og:updated_time" content="2017-04-01T16:40:05.495Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="什么是一个好的产品需求文档模版？">
+<meta name="twitter:description" content="Loew 译
+写一个好的产品需求文档（Product Requirements Document, PRD）不是一件简单的事情，但是很有必要。产品需求文档可以更好的帮助你交流新的功能与你的同事；还可以帮助你得出怎么样使用每个新的功能去解决问题和实现你的目标的答案。
+这里列了一些产品需求文档必须具备的部分。每个部分都很重要。还有他们全来自于一个结合的整体，结果可以改变你的产品管理流程：
+
+1.客观的">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.loewwu.com/2017/04/02/What's a PRD Template/"/>
+
+
+
+
+
+  <title> 什么是一个好的产品需求文档模版？ | Loew Wu </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Loew Wu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.loewwu.com/2017/04/02/What's a PRD Template/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Loew Wu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Loew Wu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                什么是一个好的产品需求文档模版？
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-02T00:11:25+08:00">
+                2017-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/需求分析/" itemprop="url" rel="index">
+                    <span itemprop="name">需求分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Loew 译</p>
+<p>写一个好的产品需求文档（Product Requirements Document, PRD）不是一件简单的事情，但是很有必要。产品需求文档可以更好的帮助你交流新的功能与你的同事；还可以帮助你得出怎么样使用每个新的功能去解决问题和实现你的目标的答案。</p>
+<p>这里列了一些产品需求文档必须具备的部分。每个部分都很重要。还有他们全来自于一个结合的整体，结果可以改变你的产品管理流程：</p>
+<blockquote>
+<p>1.<strong>客观的（Objective）</strong></p>
+<p>2.<strong>核心成分（Core Components）</strong></p>
+<p>3.<strong>用户流（User Flow）</strong></p>
+<p>4.<strong>每个流步骤的细节（Details on Each User Flow Step）</strong></p>
+<p>5.<strong>分析（Analytics）</strong></p>
+<p>6.<strong>未来的功能（Future Features）</strong></p>
+</blockquote>
+<h4 id="1-客观性"><a href="#1-客观性" class="headerlink" title="1.客观性"></a>1.客观性</h4><p>  这是对你产品需求文档的一个介绍，你需要将一些背景信息告知给你的读者，从而可以帮助他们理解关键功能是什么。你可以让事情保持在高水平和回答问题，如：</p>
+<ul>
+<li>这个产品或功能给谁使用？</li>
+<li>你尝试去解决什么问题？</li>
+<li>这个功能的目的是什么？</li>
+<li>这个功能能做什么，不能做什么？</li>
+</ul>
+<p>所以有<strong>客观的</strong>这个部分就像有一个「大哥哥」看着你，监督着你。它确保你建立的每个功能与产品团队必须实现的那个高水平目标相关联。它同样吸引你的注意力（还有文档读者的注意力）于核心产品或功能。</p>
+<p>在本质上，它帮助你确保你的团队在正确的道路上和避免功能不明确（avoids feature creep）。</p>
+<h4 id="2-核心成分"><a href="#2-核心成分" class="headerlink" title="2.核心成分"></a>2.核心成分</h4><p>考虑你的产品需求文档的核心成分作为目录。核心成分部分列出产品功能的关键部分。这将帮助文档读者理解接下来产品需求文档中的内容。</p>
+<p>例如，你正在建立一个新的电子商务功能去帮助你的使用者购买一些彩色铅笔。这件事中的核心成分就可能是：</p>
+<ul>
+<li>搜索结果页面（你的用户怎么样去寻找他们想要的彩色铅笔）</li>
+<li>产品详细信息页面（关于他们的最喜爱的彩色铅笔的相关信息）</li>
+<li>合计账单页面（为了购买彩色铅笔所必须提供的信息）</li>
+<li>订单确认页面（他们购买彩色铅笔之后所发生的事）</li>
+</ul>
+<p>在某种程度上，你的产品需求文档就像一个金字塔。你从金字塔顶部开始，定义你要解决的问题。当你在金字塔上向下移动（写产品需求文档），你会参与更多层细节在不同的每个功能成分中。核心成分部分会帮助文档读者更好理解哪个页面需要被建立，和什么东西被需要在建立每个页面时。</p>
+<h4 id="3-用户流"><a href="#3-用户流" class="headerlink" title="3.用户流"></a>3.用户流</h4><p>用户流是一个用来定义顾客、用户行程的空间。在核心成分和用户流之间或许会有一些重叠。但是只有用户流参与到用户如何弄通每个进程的步骤的详细实施中。当核心成分布置所有不同的页面和需求的功能，用户流是一步一步的用户们使用的为实现他们目标的进程。</p>
+<p>再次使用彩色铅笔的例子，这件事中的用户流就可能是：</p>
+<blockquote>
+<p><strong>主页</strong></p>
+<ul>
+<li>萨姆，一个彩色铅笔的爱好者，在搜索框中输入一个能带他去往搜索结果页面的短语。</li>
+</ul>
+<p><strong>搜索结果页面</strong></p>
+<ul>
+<li>萨姆点击一支蓝色的彩色铅笔，为了得到更多的这支铅笔的信息。</li>
+</ul>
+<p><strong>产品细节页面</strong></p>
+<ul>
+<li>萨姆决定购买这支彩色铅笔，然后点击了「添加到购物车」。</li>
+<li>然后萨姆点击了「去付款」。</li>
+</ul>
+<p><strong>收银台页面</strong></p>
+<ul>
+<li>萨姆提交了购买表单在收银台页面。</li>
+</ul>
+<p><strong>订购确认页面</strong></p>
+<ul>
+<li>萨姆查看订单确认页面</li>
+</ul>
+<p><strong>订单确认电子邮件</strong></p>
+<ul>
+<li>萨姆收到一封订购确认电子邮件</li>
+</ul>
+</blockquote>
+<p>在这个部分，我们从核心成分得出了页面事件然后在每个页面提取了一些关键动作。这里解释了用户流从开始到结束基本的流程。现在，你能画出功能和用户浏览的流程图了。你应该也理解了新功能的关键成分。</p>
+<h4 id="4-每个用户流步骤的细节"><a href="#4-每个用户流步骤的细节" class="headerlink" title="4.每个用户流步骤的细节"></a>4.每个用户流步骤的细节</h4><p>到目前为止，你已经定义了你的新功能的关键，客观性、核心成分和用户流。现在，是时候去定义每个页面事件的具体内容了。在每个页面事件中，你会概述工作的功能的所有元素——和肯呢个存在的所有不同状况。</p>
+<p>第一，你应该列出所有不同元素在页面上。当你这么做了，记住你要编写的产品或功能的核心目标。任何你制作的元素应该直接服务于那个目的。</p>
+<font size="4">产品细节页面的元素</font>
+
+<blockquote>
+<ul>
+<li>价格</li>
+<li>产品名称</li>
+<li>描述</li>
+<li>社交媒体的分享</li>
+<li>评论回顾</li>
+<li>购买</li>
+<li>照片</li>
+</ul>
+</blockquote>
+<p>对每个元素来说，你应该得知更多细节去帮助你的团队理解每个成分的运行，那个状况需要被解决，和哪个开发类型应该被提出。</p>
+<p>这里是一个需要你提供信息的典型例子，还有当你写产品需求文档时，你需要问你自己的问题：</p>
+<blockquote>
+<p><strong>照片</strong></p>
+<ul>
+<li>需要一些能够循环播放的照片在幻灯片播放器中。</li>
+<li>当萨姆点击照片，谈呢个看见更大的铅笔的照片。</li>
+</ul>
+<p><strong>价格</strong></p>
+<ul>
+<li>萨姆（彩色铅笔热爱者）为买彩色铅笔会花的钱。</li>
+</ul>
+<p><strong>产品的名称</strong></p>
+<ul>
+<li>这是特色在页面上。</li>
+</ul>
+<p><strong>描述</strong></p>
+<ul>
+<li>描述应该写多少？</li>
+<li>有没有一个字符或者单词计数？</li>
+</ul>
+<p><strong>社会分享</strong></p>
+<ul>
+<li>这个产品能被社交媒体分享吗？</li>
+<li>对于每个典型的社交媒体（脸书、Pinterest、推特、电子邮件等），反响会如何？</li>
+<li>好的提示：考虑下谁会看到这个产品和什么可以说服他们去点击。</li>
+</ul>
+<p><strong>评价回顾</strong></p>
+<ul>
+<li>当没有人回顾评论怎么样做？</li>
+<li>当有一个或者更多的人回顾评论怎么样做？</li>
+</ul>
+</blockquote>
+<p>当你完成这些在你写产品需求文档时，记得核心目的——为了让每个人保持在相同频道，所以他们能理解功能怎么样工作。为了达到这个目的，你要提供足够的细节，以至于任何看你文档的人都会完全理解这个产品的工作。</p>
+<h4 id="5-分析"><a href="#5-分析" class="headerlink" title="5.分析"></a>5.分析</h4><p>在写你的产品需求文档时，你应该和你的团队一起工作，外加恰当的追踪去保证你的产品和功能的实现。没有恰当的追踪，你会两眼一抹黑，并且不能控制你的功能的发展。除非你对你的用户的工作知道得一清二楚，否则你不会知道怎么样去提高你的功能（或者功能中哪里可以提高）。</p>
+<p>这个进程的第一步是列出3个主要的问题你想回答的。这些是问题，也是关键的度量标准，这将帮助你理解产品或功能是否做得好。</p>
+<p>所以，对于电子商务功能，购买转化率就是一个关键的度量。这是你的访问者转化为彩色铅笔购买者的百分比。为了追踪这个信息，你可以查看访问每一步页面的人数在你的后台。</p>
+<p>让我们看一下一个例子。这是一些虚假的访问每一步页面的人数的信息：</p>
+<blockquote>
+<ul>
+<li><strong>搜索页面：</strong>100人</li>
+<li><strong>产品细节页面：</strong>80人</li>
+<li><strong>收银台页面：</strong>70人</li>
+<li><strong>订单确认页面：</strong>10人</li>
+</ul>
+</blockquote>
+<p>你注意到购买信息确认的人数和访问收银台页面的人数的关系了吗？相比较其他的页面，那是一个很大的跳跃。所以，这个数据指出你应该花更多的时间去使你的收银台页面更加优化。要努力去提高页面的实现，这会提高购买的百分比。</p>
+<p>接下来是评估你的收银台去确认人们惦记了页面的哪些部分，还有是什么原因使他们没有完成购买。</p>
+<p>在分析的时候，这些是你应该做的典型的问题和假设。一旦你的功能上线了，你应该关注这些问题和假说，认真去回答。</p>
+<h4 id="6-未来功能"><a href="#6-未来功能" class="headerlink" title="6.未来功能"></a>6.未来功能</h4><p>这一部分会帮助你的团队理解产品会如何演化随着时间的过去。这个不需要非常深入的挖掘，只要帮助你的团队看清这个产品或功能通过你的视角。</p>
+<p>记住作为一个项目经理，你需要以此成为专家。你应该比别人拥有更多产品知识，还有你应该分享这些知识去帮助你的团队达到相同的目的。</p>
+<p>不要假想其他人知道你是做什么的——反之亦然。你能成为一个产品领导者的最大的助力是与你的团队分享知识。</p>
+<hr>
+<p><strong>版权声明：</strong></p>
+<p>本译文用于学习和交流目的。非商业转载请注明译者、出处，并保留文化脏在译言的完整链接。</p>
+<blockquote>
+<p>原文来源：<a href="www.aha.io">aha.io</a></p>
+<p>原文标题：What is a good product requirements document template?</p>
+<p>原文地址：<a href="https://www.aha.io/roadmapping/guide/requirements-management/what-is-a-good-product-requirements-document-template" target="_blank" rel="external">https://www.aha.io/roadmapping/guide/requirements-management/what-is-a-good-product-requirements-document-template</a></p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/需求分析/" rel="tag"># 需求分析</a>
+          
+            <a href="/tags/翻译/" rel="tag"># 翻译</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/26/GettingStartedWithAndroid/" rel="next" title="安卓入门">
+                <i class="fa fa-chevron-left"></i> 安卓入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Loew Wu" />
+          <p class="site-author-name" itemprop="name">Loew Wu</p>
+           
+              <p class="site-description motion-element" itemprop="description">Stay hungry,stay foolsh.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-客观性"><span class="nav-number">1.</span> <span class="nav-text">1.客观性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-核心成分"><span class="nav-number">2.</span> <span class="nav-text">2.核心成分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-用户流"><span class="nav-number">3.</span> <span class="nav-text">3.用户流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-每个用户流步骤的细节"><span class="nav-number">4.</span> <span class="nav-text">4.每个用户流步骤的细节</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-分析"><span class="nav-number">5.</span> <span class="nav-text">5.分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-未来功能"><span class="nav-number">6.</span> <span class="nav-text">6.未来功能</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loew Wu</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
