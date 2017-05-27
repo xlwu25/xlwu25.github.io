@@ -1,0 +1,744 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Latex,学术文章,Atom," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="前言本文主要介绍我是如何使用Atom搭配Latex的环境来编写我的一份学术性作业，主要包括我所使用的软件，Latex入门简介，文章内容的获取，成果的展示等。
+所使用的软件Atom简介Atom是由GitHub开发的自由及开放源代码的文字与代码编辑器，支持OS X，Windows和Linux操作系统,支持Node.js所写的插件,并内置由GitHub提供的Git版本控制系统[1]。可以配置出许多语言的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何利用Latex写期刊类文章？">
+<meta property="og:url" content="http://www.loewwu.com/2017/05/27/UseLatexWriteArticals/index.html">
+<meta property="og:site_name" content="Loew Wu">
+<meta property="og:description" content="前言本文主要介绍我是如何使用Atom搭配Latex的环境来编写我的一份学术性作业，主要包括我所使用的软件，Latex入门简介，文章内容的获取，成果的展示等。
+所使用的软件Atom简介Atom是由GitHub开发的自由及开放源代码的文字与代码编辑器，支持OS X，Windows和Linux操作系统,支持Node.js所写的插件,并内置由GitHub提供的Git版本控制系统[1]。可以配置出许多语言的">
+<meta property="og:updated_time" content="2017-05-27T03:50:04.100Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何利用Latex写期刊类文章？">
+<meta name="twitter:description" content="前言本文主要介绍我是如何使用Atom搭配Latex的环境来编写我的一份学术性作业，主要包括我所使用的软件，Latex入门简介，文章内容的获取，成果的展示等。
+所使用的软件Atom简介Atom是由GitHub开发的自由及开放源代码的文字与代码编辑器，支持OS X，Windows和Linux操作系统,支持Node.js所写的插件,并内置由GitHub提供的Git版本控制系统[1]。可以配置出许多语言的">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.loewwu.com/2017/05/27/UseLatexWriteArticals/"/>
+
+
+
+
+
+  <title> 如何利用Latex写期刊类文章？ | Loew Wu </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Loew Wu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.loewwu.com/2017/05/27/UseLatexWriteArticals/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Loew Wu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Loew Wu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                如何利用Latex写期刊类文章？
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-27T09:29:25+08:00">
+                2017-05-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Latex/" itemprop="url" rel="index">
+                    <span itemprop="name">Latex</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文主要介绍我是如何使用Atom搭配Latex的环境来编写我的一份学术性作业，主要包括我所使用的软件，Latex入门简介，文章内容的获取，成果的展示等。</p>
+<h3 id="所使用的软件"><a href="#所使用的软件" class="headerlink" title="所使用的软件"></a>所使用的软件</h3><h4 id="Atom简介"><a href="#Atom简介" class="headerlink" title="Atom简介"></a>Atom简介</h4><p><strong>Atom</strong>是由GitHub开发的自由及开放源代码的文字与代码编辑器，支持OS X，Windows和Linux操作系统,支持Node.js所写的插件,并内置由GitHub提供的Git版本控制系统<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="来自维基百科对Atom（编辑器）的介绍，https://zh.wikipedia.org/wiki/Atom_(%E6%96%87%E5%AD%97%E7%B7%A8%E8%BC%AF%E5%99%A8)
+">[1]</span></a></sup>。可以配置出许多语言的环境，如C语言、C++环境等，还有许多的主题可以选择。</p>
+<h4 id="Latex简介"><a href="#Latex简介" class="headerlink" title="Latex简介"></a>Latex简介</h4><p><strong>Latex</strong>是一种基于TEX的排版系统，由美国计算机科学家莱斯利·兰伯特在20世纪80年代初期开发，利用这种格式，即使用户没有排版和程序设计的知识也可以充分发挥由TEX所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。对于生成复杂表格和数学公式，这一点表现得尤为突出。因此它非常适用于生成高印刷质量的科技和数学类文档。这个系统同样适用于生成从简单的信件到完整书籍的所有其他种类的文档<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="来自维基百科对Latex介绍，https://zh.wikipedia.org/wiki/LaTeX">[2]</span></a></sup>。</p>
+<h4 id="软件的安装与配置"><a href="#软件的安装与配置" class="headerlink" title="软件的安装与配置"></a>软件的安装与配置</h4><p>可以参考 hufeihu 博客中的一篇<a href="http://blog.csdn.net/u011596455/article/details/68954440" target="_blank" rel="external">文章</a>，这篇文章中提到了要先安装 Tex Live，我没有单独安装 Tex Live，但是我安装了<a href="http://www.ctex.org/HomePage" target="_blank" rel="external">CTeX套件</a>，里面包含了 Tex Live，由于CTeX套件里的编译器的外观不是很炫酷，所以我不想用 CTeX 套件。网上关于如何在 Atom 上配置 Latex 的这类资料很多，可以自行百度或谷歌解决。提一点，我在安装 Atom 的Package的时候用到了 VPN，如果没有 VPN，应该会安装失败，但是网上也有相对应的解决方案，只要认真地去做即可。</p>
+<h3 id="Latex入门简介"><a href="#Latex入门简介" class="headerlink" title="Latex入门简介"></a>Latex入门简介</h3><p>有些人可能刚开始接触 Latex，我讲个通俗的比喻。和 Word 等所见即所得的软件完全不同，Latex 更像一门编程语言，像敲代码一样，文章就是在一行行代码中写出来的。一开始是使用用到的包，接下来是主文档，然后是文档里的一些目录，章节之类的。写完后用编译器编译，输出 pdf 查看。如果你没有接触过 Latex，或者对 Latex 没有了解，最好先了解下，稍微学习下 Latex，可以查看这份文档——<a href="http://7xrsm1.com1.z0.glb.clouddn.com/lshort-zh-cn.pdf" target="_blank" rel="external">一份不太简短的 LATEX 2ε 介绍</a>，有了一定的了解之后再开始写就会轻松许多，我的建议是如果你想系统的学习Latex，那就安安稳稳看完它，虽然看完后也不可能完全掌握Latex的技能，但是你会有个大致的印象，再自己实践去写，这样提高会迅速一点。如果你不想要系统的去学，只是想能写个文档，写个毕业论文，那我觉得没必要全看完，可以有个大致了解，然后在实践中去学习，遇到什么想要写，就去查查文档，查查百度和谷歌，比如想画个表格，那就去查怎么用 Latex 画表格。</p>
+<h3 id="文章内容的获取"><a href="#文章内容的获取" class="headerlink" title="文章内容的获取"></a>文章内容的获取</h3><h4 id="Latex-模板的获取"><a href="#Latex-模板的获取" class="headerlink" title="Latex 模板的获取"></a>Latex 模板的获取</h4><p>百度或这谷歌 Latex 模板，会找到许多的模板，当你对Latex有了一定了解之后，再使用这些模板才会得心应手，如果你什么都不知道，拿到模板你会感觉无从下手。</p>
+<p>这里有几个模板网站可以看一下：</p>
+<ul>
+<li><a href="http://www.latextemplates.com/" target="_blank" rel="external">Latex Templates</a></li>
+<li>overleaf的 <a href="https://www.overleaf.com/latex/templates" target="_blank" rel="external">Latex Templates</a></li>
+<li><a href="http://www.latexstudio.net/archives/category/latex-templates/thesis-template" target="_blank" rel="external">论文模板 Latex工作室</a></li>
+<li><a href="https://www.ieee.org/publications_standards/publications/authors/author_templates.html" target="_blank" rel="external">IEEE 的模板</a></li>
+</ul>
+<h4 id="Latex-模板的使用"><a href="#Latex-模板的使用" class="headerlink" title="Latex 模板的使用"></a>Latex 模板的使用</h4><p>我的作业的模板是用的该<a href="http://www.latextemplates.com/template/journal-article" target="_blank" rel="external">模板</a>，下载完成后，会得到一个zip文件，解压后得到一个tex为后缀的文件，用Atom打开，先编译一下，看看效果，如编译不成功，则回头看看软件有没有安装完全，配置有没有配置好。</p>
+<p>对Latex有了一定的了解之后，直接开始修改就可以了，我截取了其中一段，来举个例子：</p>
+<h5 id="修改前："><a href="#修改前：" class="headerlink" title="修改前："></a>修改前：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">\title&#123;Article Title&#125; % Article title</div><div class="line"></div><div class="line">\author&#123;%</div><div class="line"></div><div class="line">\textsc&#123;John Smith&#125;\thanks&#123;A thank you or further information&#125; \[1ex] % Your name</div><div class="line"></div><div class="line">\normalsize University of California \ % Your institution</div><div class="line"></div><div class="line">\normalsize \href&#123;mailto:john@smith.com&#125;&#123;john@smith.com&#125; % Your email address</div></pre></td></tr></table></figure>
+<h5 id="修改后："><a href="#修改后：" class="headerlink" title="修改后："></a>修改后：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">\title&#123;How to use Latex Write an professional artical&#125; % Article title</div><div class="line"></div><div class="line">\author&#123;%</div><div class="line"></div><div class="line">\textsc&#123;Xueliang Wu&#125;\\[1ex]</div><div class="line"></div><div class="line">\normalsize Zhejiang University of Technology \\</div><div class="line"></div><div class="line">\normalsize \href&#123;mailto:xlwu25@gmail.com&#125;&#123;xlwu25@gmail.com&#125;</div></pre></td></tr></table></figure>
+<p>大致就是这样，修改完基础信息后，就可以开始编写文章的内容了，一步步往下走就好。</p>
+<h3 id="文章内容的获取-1"><a href="#文章内容的获取-1" class="headerlink" title="文章内容的获取"></a>文章内容的获取</h3><p>不知道你们有没有和我有同样的问题，老师让我们写一篇比较正式的论文作业，包括摘要、介绍、方法、参考文献等等，主要就是参考文献，以前写的文章好像从来都没有参考文献这个概念，那么到底怎么去写这个文章？怎么用参考文献呢？</p>
+<p>我的方法是先明确你要写什么，或者说老师要你写什么，如果老师给的只是一个大的方向，那你要想清楚你具体写的内容是什么，不要太大。如果老师给的题目就已经很小了，那就不用再去细分。然后根据最后确立的小的方向进行搜索资料，查找文献。</p>
+<p>我使用的是谷歌学术搭配学校购买的中国知网资源，学校一般会有各大资源网站的访问权限，所以这个资源不要浪费了。</p>
+<p>当你看了一定的文献之后，就可以开始构思自己的文章该怎么写了，要写好一篇论文真的不容易。</p>
+<h3 id="成果的展示"><a href="#成果的展示" class="headerlink" title="成果的展示"></a>成果的展示</h3><p>最后来看看我的作业成果吧，不论内容的话，我觉得排版还是很好的。由于是和同学合作的，所以我的作业只包含了一部分，还有写内容是 To be defined ，即有待完善。完整的工程目录已经上传至我的 GitHub 仓库，包含了我看的参考文献和整个工程。</p>
+<ul>
+<li><a href="http://7xrsm1.com1.z0.glb.clouddn.com/The%20Various%20Aspects%20of%20Outsourcing.pdf" target="_blank" rel="external">文章链接</a></li>
+<li><a href="https://github.com/xlwu25/Latex-Project/tree/master/The%20Various%20Aspects%20of%20Outsourcing" target="_blank" rel="external">工程链接</a></li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">来自维基百科对Atom（编辑器）的介绍，<a href="https://zh.wikipedia.org/wiki/Atom_(%E6%96%87%E5%AD%97%E7%B7%A8%E8%BC%AF%E5%99%A8" target="_blank" rel="external">https://zh.wikipedia.org/wiki/Atom_(%E6%96%87%E5%AD%97%E7%B7%A8%E8%BC%AF%E5%99%A8</a>)<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">来自维基百科对Latex介绍，<a href="https://zh.wikipedia.org/wiki/LaTeX" target="_blank" rel="external">https://zh.wikipedia.org/wiki/LaTeX</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Latex/" rel="tag"># Latex</a>
+          
+            <a href="/tags/学术文章/" rel="tag"># 学术文章</a>
+          
+            <a href="/tags/Atom/" rel="tag"># Atom</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/11/AnTentativeIdea/" rel="next" title="一个不成熟的想法">
+                <i class="fa fa-chevron-left"></i> 一个不成熟的想法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Loew Wu" />
+          <p class="site-author-name" itemprop="name">Loew Wu</p>
+           
+              <p class="site-description motion-element" itemprop="description">Stay hungry, stay foolsh.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xlwu25" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#所使用的软件"><span class="nav-number">2.</span> <span class="nav-text">所使用的软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Atom简介"><span class="nav-number">2.1.</span> <span class="nav-text">Atom简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Latex简介"><span class="nav-number">2.2.</span> <span class="nav-text">Latex简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#软件的安装与配置"><span class="nav-number">2.3.</span> <span class="nav-text">软件的安装与配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Latex入门简介"><span class="nav-number">3.</span> <span class="nav-text">Latex入门简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章内容的获取"><span class="nav-number">4.</span> <span class="nav-text">文章内容的获取</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Latex-模板的获取"><span class="nav-number">4.1.</span> <span class="nav-text">Latex 模板的获取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Latex-模板的使用"><span class="nav-number">4.2.</span> <span class="nav-text">Latex 模板的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#修改前："><span class="nav-number">4.2.1.</span> <span class="nav-text">修改前：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改后："><span class="nav-number">4.2.2.</span> <span class="nav-text">修改后：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章内容的获取-1"><span class="nav-number">5.</span> <span class="nav-text">文章内容的获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成果的展示"><span class="nav-number">6.</span> <span class="nav-text">成果的展示</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loew Wu</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
